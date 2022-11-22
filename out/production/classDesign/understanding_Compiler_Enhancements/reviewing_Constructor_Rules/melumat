@@ -1,0 +1,19 @@
+
+
+1. Hər konstruktorun ilk ifadəsi ya this() açar sözündən istifadə edərək class
+daxilindəki digər konstruktoru çağırır, ya da super() açar sözündən istifadə edərək
+birbaşa parent classın konstruktorunu çağırır.
+
+2. super() və this() ancaq konstruktorun birinci ifadəsi (first statement) olmalıdır, əks
+halda xəta verir.
+
+3. Əgər super() konstruktorda aşkar şəkildə əlavə edilməzsə, Java konstruktorun ilk
+sətrinə arqumentsiz super() ifadəsini əlavə edəcək.
+
+4. Əgər parent classın parametrsiz konstruktoru yoxdursa və child classda hər hansı bir
+konstruktor yaradılmayıbsa, kompilyator xəta verəcək və arqumentsiz default
+konstruktoru (default no-argument constructor) child classa əlavə etməyə cəhd
+edəcək.
+
+5. Əgər parent classın parametrsiz konstruktoru yoxdursa, kompilyator hər child
+konstruktorda parent konstruktoru aşkar şəkildə çağırmağı tələb edir.
