@@ -1,0 +1,43 @@
+
+
+*Default Interface Methods
+
+ Default metod java 8 ilə yeni gələn özəlliklərdən biridir. Default metod interfeysin daxilində
+ default açar sözü ilə təyin edilən və gövdəsi olan metoddur. İnterfeysi implements edən
+ classların default metodu override etmək kimi bir məcburiyyəti yoxdur. Classların sərbəst
+ seçimi var, istəsə override edə bilər, istəməsə yox. Əgər override etməsə, o zaman interfeysdə
+ elan edilən default metod istifadə ediləcəkdir. Sintaksisi aşağıdakı kimidir:
+
+ --* Default metodlar üçün aşağıdakı qaydalar mövcuddur:
+
+ 1. Default metod ancaq interfeys daxilində elan edilə bilər, class və abstrakt class
+ daxilində elan edilə bilməz;
+
+ 2. Default metodlar default açar sözü ilə işarələnməlidir və əgər default açar sözü ilə
+ işarələnibsə, mütləq gövdəsi olmalıdır;
+
+ 3. Default metodların static, final və ya abstract olduğu fərz edilməməlidir (daha
+ dəqiq desək default metodlarla bu açar sözlərin birgə istifadəsinə icazə verilmir), onlar
+ interfeysi implements edən class tərəfindən istifadə edilə və ya override oluna bilər;
+
+ 4. Bütün interfeys metodları kimi default metodların da public olduğu fərz edilməlidir.
+ Və bu səbəbdən private və ya protected kimi işarələnən default metodlar kompayl
+ olunmur.
+
+
+--** Əgər hər hansı bir interfeys, daxilində default metod olan başqa bir interfeysi extends edərsə,
+ həmin default metod ilə bir neçə cür davrana bilər:
+
+  default metodla bağlı hər hansı bir davranışdan imtina edə bilər, bu zaman original
+ default metod üçün təyin edilmiş gövdə istifadə olunur;
+
+  default metodu yenidən override edə bilər;
+
+  default metodu yenidən abstract metod kimi elan edə bilər. Belə olduqda isə artıq
+ ikinci interfeysi implements edən class həmin metodu override etmək
+ məcburiyyətindədir.
+
+ --*** İnterfeysin default metodlarını həmin interfeysi implements edən konkret class daxilində
+       super açar sözü ilə çağırmaq mümkün deyil. super açar sözü ancaq classlar üçün istifadə
+       edildikdə düzgün işləyir. Əgər default metodlar üçün istifadə etmək istəyiriksə, mütləq super
+       açar sözünün qarşısında həmin interfeysin adını qeyd etmək lazımdır:
